@@ -1,3 +1,11 @@
 test:
   pre:
+    # Generate build
     - PACTO_MODE=generate bundle exec rake
+
+  override:
+    # Validate build, makes a live connection
+    - PACTO_MODE=validate bundle exec rake
+
+    # Doesn't make a live connection
+    - PACTO_MODE=validate STUB_PROVIDERS=true bundle exec rake
