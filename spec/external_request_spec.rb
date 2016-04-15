@@ -1,4 +1,6 @@
 require 'spec_helper'
+require 'uri'
+require 'net/http'
 
 describe 'External request', :vcr => true do
   it 'queries FactoryGirl contributors on Github' do
