@@ -1,7 +1,44 @@
+GIT
+  remote: https://github.com/thoughtworks/pacto.git
+  revision: b5ddc3c42cb7ea9d160682c3b09020703a82d5a6
+  branch: master
+  specs:
+    pacto (0.4.0.rc3)
+      addressable (~> 2.3)
+      faraday (~> 0.9)
+      hashie (~> 3.0)
+      json-generator (~> 0.0, >= 0.0.5)
+      json-schema (~> 2.0)
+      json-schema-generator (~> 0.0, >= 0.0.7)
+      middleware (~> 0.1)
+      multi_json (~> 1.8)
+      swagger-core (~> 0.2, >= 0.2.1)
+      thor (~> 0.19)
+      webmock (~> 1.18)
+
 GEM
   remote: https://rubygems.org/
   specs:
+    addressable (2.3.8)
+    crack (0.4.3)
+      safe_yaml (~> 1.0.0)
     diff-lcs (1.2.5)
+    faraday (0.9.2)
+      multipart-post (>= 1.2, < 3)
+    hashdiff (0.3.0)
+    hashie (3.3.2)
+    json-generator (0.1.0)
+      json-schema
+    json-schema (2.6.1)
+      addressable (~> 2.3.8)
+    json-schema-generator (0.0.9)
+      jsonpath
+    jsonpath (0.5.8)
+      multi_json
+    middleware (0.1.0)
+    mime-types (2.99.1)
+    multi_json (1.11.2)
+    multipart-post (2.0.0)
     rake (11.1.2)
     rspec (3.4.0)
       rspec-core (~> 3.4.0)
@@ -16,11 +53,23 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.4.0)
     rspec-support (3.4.1)
+    safe_yaml (1.0.4)
+    swagger-core (0.2.3)
+      addressable (~> 2.3)
+      hashie (~> 3.0, < 3.4.0)
+      json-schema (~> 2.2)
+      mime-types (~> 2.0)
+    thor (0.19.1)
+    webmock (1.24.3)
+      addressable (>= 2.3.6)
+      crack (>= 0.3.2)
+      hashdiff
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  pacto!
   rake
   rspec
 

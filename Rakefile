@@ -4,4 +4,18 @@ begin
 rescue LoadError
 end
 
-task :default => :spec
+task :all do
+  ENV["PACTO_MODE"] = "generate"
+  Rake::Task["spec"].invoke
+
+  Rake::Task["spec"].reenable
+  ENV["PACTO_MODE"] = "validate"
+  Rake::Task["spec"].invoke
+
+  Rake::Task["spec"].reenable
+  ENV["PACTO_MODE"] = "validate"
+  ENV["STUB_PROVIDER"] = "true"
+  Rake::Task["spec"].invoke
+end
+
+task :default => :all
